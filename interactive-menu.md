@@ -25,6 +25,7 @@ find-target:
 	| xargs -I '{}' make {}
 ```
 
+
 - `grep`: search in Makefile and all included makefiles for lines containing `.PHONY:` followed by spaces then any characters and finally `➤`.
 
     ```console
