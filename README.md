@@ -93,4 +93,4 @@ So, the idea is:
 1. To let the user choose the target to run when no target is defined.
 2. Be able to present a list of goals available to the user.
 
-The details on how this is achieved can be found [here](menu.md). If you simply want to test it, just run make.
+The details on how this is achieved can be found [here](interactive-menu.md). If you simply want to test it, just run make.
