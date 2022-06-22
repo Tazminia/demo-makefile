@@ -28,7 +28,7 @@ find-target:
 - `grep`: search in Makefile and all included makefiles for lines containing `.PHONY:` followed by spaces then any characters and finally `➤`.
 
     ```bash
-    tazminia@laptop:~$ grep --no-filename -E '.PHONY:[[:space:]].*➤'  \
+    $ grep --no-filename -E '.PHONY:[[:space:]].*➤'  \
         Makefile mk/python.mk mk/docker.mk
     .PHONY: helloworld ➤
     .PHONY: helloworld-debug ➤
@@ -40,7 +40,7 @@ find-target:
 - first `sed`: take the result of grep and remove the trailing spaces along with `➤`.
 
     ```bash
-    tazminia@laptop:~$ grep --no-filename -E '.PHONY:[[:space:]].*➤'  \
+    $ grep --no-filename -E '.PHONY:[[:space:]].*➤'  \
         Makefile mk/python.mk mk/docker.mk \
         | sed -n -E "s/[[:space:]]+➤//p"
     .PHONY: helloworld
@@ -54,7 +54,7 @@ find-target:
 - Second `sed`: take the result of `sed` and remove `.PHONY:` and leading spaces.
 
     ```bash
-    tazminia@laptop:~$ grep --no-filename -E '.PHONY:[[:space:]].*➤'  \
+    $ grep --no-filename -E '.PHONY:[[:space:]].*➤'  \
         Makefile mk/python.mk mk/docker.mk \
         | sed -n -E "s/[[:space:]]+➤//p" \
         | sed -n -E "s/.PHONY:[[:space:]]+//p"

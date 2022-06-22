@@ -19,10 +19,10 @@ brew install fzf
 `@` in makefile is used to supress printing the command to be run. For instance:
 
 ```bash
-tazminia@laptop:~$ make helloworld
+$ make helloworld
 Hi
 
-tazminia@laptop:~$ make helloworld-debug
+$ make helloworld-debug
 echo "Hi"
 Hi
 ```
@@ -41,9 +41,9 @@ helloworld-debug:
 `include` allows to load code from other makefiles. For example:
 
 ```bash
-tazminia@laptop:~$ make helloworld
+$ make helloworld
 Hi
-tazminia@laptop:~$ make get-python-version
+$ make get-python-version
 Python 3.9.13
 ```
 
@@ -55,13 +55,13 @@ Python 3.9.13
 Consider the following:
 
 ```bash
-tazminia@laptop:~$ make helloworld
+$ make helloworld
 Hi
-tazminia@laptop:~$ make helloworld
+$ make helloworld
 Hi
-tazminia@laptop:~$ make foo.txt
+$ make foo.txt
 Create file named foo.txt
-tazminia@laptop:~$ make foo.txt
+$ make foo.txt
 make: 'foo.txt' is up to date.
 ```
 
