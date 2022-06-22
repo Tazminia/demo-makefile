@@ -8,7 +8,7 @@ It is for learning purposes only.
 
 `fzf` is used to create an interactive menu. To install `fzf` on MacOs:
 
-```bash
+```console
 brew install fzf
 ```
 
@@ -18,11 +18,11 @@ brew install fzf
 
 `@` in makefile is used to supress printing the command to be run. For instance:
 
-```bash
-$ make helloworld
+```console
+tazminia@laptop:~$ make helloworld
 Hi
 
-$ make helloworld-debug
+tazminia@laptop:~$ make helloworld-debug
 echo "Hi"
 Hi
 ```
@@ -40,10 +40,10 @@ helloworld-debug:
 
 `include` allows to load code from other makefiles. For example:
 
-```bash
-$ make helloworld
+```console
+tazminia@laptop:~$ make helloworld
 Hi
-$ make get-python-version
+tazminia@laptop:~$ make get-python-version
 Python 3.9.13
 ```
 
@@ -54,14 +54,14 @@ Python 3.9.13
 
 Consider the following:
 
-```bash
-$ make helloworld
+```console
+tazminia@laptop:~$ make helloworld
 Hi
-$ make helloworld
+tazminia@laptop:~$ make helloworld
 Hi
-$ make foo.txt
+tazminia@laptop:~$ make foo.txt
 Create file named foo.txt
-$ make foo.txt
+tazminia@laptop:~$ make foo.txt
 make: 'foo.txt' is up to date.
 ```
 
